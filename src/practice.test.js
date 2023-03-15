@@ -2,6 +2,7 @@ import capitalize from './capitalize';
 import reverseString from './reverse-string';
 import calculator from './calculator';
 import caesarCipher from './caesar-cipher';
+import analyzeArray from './analyze-array';
 
 test('capitalize', () => {
   expect(capitalize('foo')).toMatch(/^[A-Z]+/);
@@ -29,4 +30,22 @@ test('calculator multiply', () => {
 
 test('caesar cipher', () => {
   expect(caesarCipher('Foo Bar !?,.')).toMatch('Sbb One !?,.');
+});
+
+const object = analyzeArray([1, 8, 3, 4, 2, 6]);
+
+test('analyze array average', () => {
+  expect(object.average).toBe(4);
+});
+
+test('analyze array min', () => {
+  expect(object.min).toBe(1);
+});
+
+test('analyze array max', () => {
+  expect(object.max).toBe(8);
+});
+
+test('analyze array', () => {
+  expect(object.length).toBe(6);
 });

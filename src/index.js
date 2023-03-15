@@ -1,4 +1,6 @@
 /* eslint-disable no-param-reassign */
+/* eslint-disable prefer-const */
+
 import './style.css';
 
-// console.log(caesarCipher('AaaYyy'), 135 % 122, 13 + 97);
+// console.log(analyzeArray([1, 8, 3, 4, 2, 6]));
