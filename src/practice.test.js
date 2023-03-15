@@ -46,6 +46,15 @@ test('analyze array max', () => {
   expect(object.max).toBe(8);
 });
 
-test('analyze array', () => {
+test('analyze array length', () => {
   expect(object.length).toBe(6);
+});
+
+test('analyze array', () => {
+  expect(object).toStrictEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
 });
