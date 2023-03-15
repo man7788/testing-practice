@@ -1,6 +1,7 @@
 import capitalize from './capitalize';
 import reverseString from './reverse-string';
 import calculator from './calculator';
+import caesarCipher from './caesar-cipher';
 
 test('capitalize', () => {
   expect(capitalize('foo')).toMatch(/^[A-Z]+/);
@@ -24,4 +25,8 @@ test('calculator divide', () => {
 
 test('calculator multiply', () => {
   expect(calculator().multiply(3, 7)).toBe(21);
+});
+
+test('caesar cipher', () => {
+  expect(caesarCipher('Foo Bar !?,.')).toMatch('Sbb One !?,.');
 });
